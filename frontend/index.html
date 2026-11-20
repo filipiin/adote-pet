@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de pet para adoção</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <h1>Adote um Pet</h1>
+
+        <nav>
+
+            <a href="anuncios.html">
+                Pets disponívei para adoção
+            </a>
+
+        </nav>
+
+    </header>
+
+     <h2>Formulário de cadastro de Pet</h2>
+
+    <form id="cadastroPet">
+
+        <h3>Informações do tutor</h3>
+
+        <label>Nome:</label>
+        <input type="text" id="nameOwner" required>
+        <br><br>
+
+        <label>Data de nascimento:</label>
+        <input type="date" id="dateBirth" required>
+        <br><br>
+
+        <label>Telefone:</label>
+        <input type="tel" id="phoneContact" required>
+
+        <h3>Informações do pet</h3>
+
+        <label>Nome do pet:</label>
+        <input type="text" id="namePet" required>
+
+        <br><br>
+
+        <label for="handOverPet">Forma de adoção:</label>
+        <select id="handOverPet" required>
+            <option value="">Selecione</option>
+            <option value="meu_endereco">Meu endereço</option>
+            <option value="endereco_adotante">Endereço do adotante</option>
+            <option value="local_combinado">Local combinado</option>
+        </select>
+
+        <br><br>
+
+        <label for="agePet">Fase do animal:</label>
+        <select id="agePet" required>
+            <option value="">Selecione</option>
+            <option value="filhote">Filhote</option>
+            <option value="jovem">Jovem</option>
+            <option value="adulto">Adulto</option>
+            <option value="idoso">Idoso</option>
+        </select>
+
+        <br><br>
+
+        <label for="dogBreed">Raça:</label>
+        <select id="dogBreed" required>
+            <option value="">Selecione uma raça</option>
+            <option value="shih_tzu">Shih-tzu</option>
+            <option value="pinscher">Pinscher</option>
+            <option value="poodle">Poodle</option>
+            <option value="labrador">Labrador Retriever</option>
+            <option value="golden">Golden Retriever</option>
+            <option value="bulldog">Bulldog Francês</option>
+            <option value="yorkshire">Yorkshire Terrier</option>
+            <option value="pastor_alemao">Pastor Alemão</option>
+            <option value="dachshund">Dachshund</option>
+            <option value="spitz">Spitz Alemão</option>
+            <option value="rottweiler">Rottweiler</option>
+            <option value="beagle">Beagle</option>
+            <option value="border_collie">Border Collie</option>
+            <option value="chihuahua">Chihuahua</option>
+            <option value="outros">Outros</option>
+            <option value="srd">Sem raça definida (SRD)</option>
+        </select>
+        
+        <div id="cadastroPet" hidden>
+        
+           <p>Qual outra raça?</p>
+        
+           <label>
+               <input type="text" id="cadastroPet" required>
+           </label>
+        
+        </div>
+
+        <p>O animal está castrado?</p>
+
+        <label>
+            <input type="radio" name="castrado" value="sim" required>
+            Sim
+        </label>
+
+        <label>
+            <input type="radio" name="castrado" value="nao">
+            Não
+        </label>
+
+        <label>
+            <input type="radio" name="castrado" value="nao_sei">
+            Não sei informar
+        </label>
+        
+        <br><br>
+
+        <label for="dogSize">Porte:</label>
+
+        <select id="dogSize" required>
+            <option value="porte_pequeno">Porte pequeno</option>
+            <option value="porte_medio">Porte médio</option>
+            <option value="porte_grande">Porte grande</option>    
+        </select>
+
+        <br><br>
+        
+        <label for="vaccination">Vacinação:</label>
+        
+        <select id="vaccination" required>
+            <option value="">Selecione</option>
+            <option value="em_dia">Vacinação em dia</option>
+            <option value="algumas_vacinas">Possui algumas vacinas</option>
+            <option value="nenhuma">Não possui</option>
+            <option value="nao_sei">Não sei informar</option>
+        </select>
+
+
+        <!-- Opções adicionais de vacinação -->
+        <div id="vaccines" hidden>
+
+            <p>Quais vacinas foram aplicadas?</p>
+
+            <label>
+                <input type="checkbox" name="vaccines" value="v8_v10">
+                V8 ou V10
+            </label>
+
+            <label>
+                <input type="checkbox" name="vaccines" value="antirrabica">
+                Antirrábica
+            </label>
+
+            <label>
+                <input type="checkbox" name="vaccines" value="tosse">
+                Tosse dos canis
+            </label>
+
+            <label>
+                <input type="checkbox" name="vaccines" value="giardia">
+                Giárdia
+            </label>
+
+            <label>
+                <input type="checkbox" name="vaccines" value="nao_sei">
+                Não sei informar
+            </label>
+
+        </div>
+
+        <br><br>
+        
+        <label for="photoPet">Foto do pet:</label>
+        <input
+            type="file"
+            id="photoPet"
+            name="photoPet"
+            accept=".png, .jpg, .jpeg"
+            required
+            >
+            
+            <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
